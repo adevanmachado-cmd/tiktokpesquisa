@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TikTok Pesquisa</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      box-sizing: border-box;
+      width: 300px;
+      margin: 0;
+      padding: 16px;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    input,
+    button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 11px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    input {
+      border: 1px solid #bbb;
+      background: white;
+      color: #222;
+    }
+
+    button {
+      margin-top: 10px;
+      border: 0;
+      background: #111;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #333;
+    }
+
+    button:focus-visible,
+    input:focus-visible {
+      outline: 2px solid #1473e6;
+      outline-offset: 2px;
+    }
+
+    #mensagem {
+      min-height: 30px;
+      margin: 12px 0 0;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <h1>TikTok Pesquisa</h1>
+
+  <form id="form-pesquisa">
+    <label for="termo">Digite o que deseja pesquisar:</label>
+    <input
+      id="termo"
+      name="termo"
+      type="text"
+      placeholder="Ex.: programação"
+      value="programação"
+      autocomplete="off"
+    >
+    <button type="submit">Pesquisar vídeos</button>
+  </form>
+
+  <button id="abrir" type="button">Abrir TikTok</button>
+  <p id="mensagem" role="status" aria-live="polite">
+    A pesquisa será aberta em uma nova aba.
+  </p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
